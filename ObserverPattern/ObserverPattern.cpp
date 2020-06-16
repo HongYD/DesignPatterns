@@ -2,9 +2,24 @@
 //
 
 #include <iostream>
+#include"Subject.h"
+#include"WeatherData.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    WeatherData* weatherData = new WeatherData();
+    CurrentConditionDisplay* currentCond = new CurrentConditionDisplay(weatherData);
+    weatherData->registerObserver(currentCond);
+    weatherData->setMeasurements(80, 65, 30.4f);
+    weatherData->notifyObservers();
+
+
+    weatherData->setMeasurements(82, 70, 29.2f);
+    weatherData->notifyObservers();
+
+
+    weatherData->setMeasurements(78, 90, 29.2f);
+    weatherData->notifyObservers();
+
 }
 

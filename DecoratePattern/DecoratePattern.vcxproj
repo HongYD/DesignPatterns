@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{66cf2e82-8702-433e-af16-85835f89fa42}</ProjectGuid>
-    <RootNamespace>ObserverPattern</RootNamespace>
+    <ProjectGuid>{f48f8c11-0d5e-496e-b91b-7bc0b6c950a3}</ProjectGuid>
+    <RootNamespace>DecoratePattern</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,12 +139,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ObserverPattern.cpp" />
-    <ClCompile Include="WeatherData.cpp" />
+    <ClCompile Include="DecoratePattern.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Subject.h" />
-    <ClInclude Include="WeatherData.h" />
+    <ClInclude Include="Beverage.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
