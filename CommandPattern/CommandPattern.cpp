@@ -2,10 +2,23 @@
 //
 
 #include <iostream>
+#include"Receiver.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    Command* c = new ConcreteCommand();
+    Receiver* r = new Receiver();
+    c->setReceiver(r);
+
+    Invoker i;
+    i.setCommand(c);
+    i.Notify();
+
+    delete r;
+    delete c;
+
+    return 0;
+
 }
 
 
