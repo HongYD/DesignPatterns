@@ -14,14 +14,21 @@ public:
 	virtual double cost() { return 0; }
 };
 
+/// <summary>
+/// 装饰者继承自也来自超类Beverage类
+/// </summary>
 class CondimentDecorator :public Beverage {
 public:
 	string getDescription() { return ""; }
 };
 
+
+/// <summary>
+/// 被装饰者，直接继承自超类 Beverage
+/// </summary>
 class Espresso :public Beverage {
 public:
-	Espresso():Beverage("Espresso"){}
+	Espresso() :Beverage("Espresso") {}
 	double cost() {
 		return 1.99;
 	}
@@ -38,8 +45,12 @@ public:
 	}
 };
 
+/// <summary>
+/// 装饰者，间接继承至Beverage
+/// </summary>
 class Mocha :public CondimentDecorator {
 private:
+	//装饰者有一个超类的引用
 	Beverage* beverage;
 public:
 	Mocha(Beverage* beve) {

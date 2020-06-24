@@ -13,9 +13,7 @@ int main()
     std::thread t2(ThreadBar);
     t1.join();
     t2.join();
-
     return 0;
-    
 }
 
 
